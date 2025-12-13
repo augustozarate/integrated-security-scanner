@@ -28,18 +28,18 @@ integrated-security-scanner/
 ├── .gitignore # Git ignore rules
 └── LICENSE # MIT License
 
-text
+
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-```bash
+```
 # Install nmap (required)
 sudo apt-get install nmap  # Debian/Ubuntu
 # or
 brew install nmap          # macOS
 Installation
-bash
+
 # Clone the repository
 git clone https://github.com/augustozarate/integrated-security-scanner.git
 cd integrated-security-scanner
@@ -47,7 +47,7 @@ cd integrated-security-scanner
 # Install Python dependencies
 pip install -r requirements.txt
 Usage Examples
-bash
+
 # Scan single host (default ports: 1-1000)
 python integrated_scanner.py 192.168.1.1
 
@@ -59,8 +59,8 @@ python integrated_scanner.py 192.168.1.1 -p 22,80,443,8080
 
 # Get help
 python integrated_scanner.py --help
+
 🏗️ Architecture
-text
 graph TD
     A[Target IP/Range] --> B[NetworkScanner]
     B --> C[Service Detection]
@@ -75,12 +75,14 @@ graph TD
     J --> K[Rich Terminal Tables]
     J --> L[JSON Export]
     J --> M[Markdown Report]
+
 📊 Performance Metrics
 Metric	Value	Description
 Cache Efficiency	95%+	API request reduction on repeat scans
 Concurrent Workers	10	Simultaneous service analyses
 Default Rate Limit	0.5s	Delay between API requests
 Typical Scan Time	~30s	For 10 services on local network
+
 🔧 Technical Details
 NetworkScanner (network_scanner.py)
 Uses python-nmap for port scanning
@@ -111,7 +113,7 @@ Multiple output formats
 
 📝 Example Output
 Network Discovery Phase
-text
+
 ╭─────────────────────────────╮
 │ Integrated Security Scanner │
 │ Target: 192.168.1.0/24      │
@@ -127,7 +129,7 @@ Phase 1: Network Service Discovery
 │ 192.168.1.1     │ 21   │ ftp         │ ProFTPD 1.3.5              │
 └─────────────────┴──────┴─────────────┴────────────────────────────┘
 Vulnerability Assessment Phase
-text
+
 Phase 2: Vulnerability Assessment
 ┏━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
 ┃ CVE ID        ┃ Severity ┃ CVSS ┃ Service ┃ Description         ┃
@@ -135,11 +137,12 @@ Phase 2: Vulnerability Assessment
 │ CVE-2021-12345│ CRITICAL │ 9.8  │ ProFTPD │ Remote code exec... │
 │ CVE-2020-6789 │ HIGH     │ 7.5  │ Apache  │ Buffer overflow...  │
 └───────────────┴──────────┴──────┴─────────┴─────────────────────┘
+
 🛠️ Dependencies
-text
 requests>=2.31.0
 python-nmap>=0.7.1
 rich>=13.0.0
+
 ⚖️ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
