@@ -1,32 +1,39 @@
-🔍 Integrated Security Scanner
-https://img.shields.io/badge/Python-3.8+-blue.svg
-https://img.shields.io/badge/Security-Pentesting-red.svg
-https://img.shields.io/badge/License-MIT-green.svg
-https://img.shields.io/github/repo-size/augustozarate/integrated-security-scanner
+# 🔍 Integrated Security Scanner
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Security](https://img.shields.io/badge/Security-Pentesting-red.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![GitHub](https://img.shields.io/github/repo-size/augustozarate/integrated-security-scanner)
 
 A professional integrated security scanner that combines network service discovery with vulnerability assessment using the NIST NVD API.
 
-✨ Features
-Feature	Description
-Network Discovery	Port scanning with nmap + banner grabbing
-Vulnerability Assessment	CVE lookup via NIST NVD API v2.0
-Smart Caching	95% API request reduction on repeat scans
-Parallel Processing	Concurrent analysis with ThreadPoolExecutor
-Professional Reporting	Rich tables, JSON exports, Markdown reports
-Rate Limiting	Respectful API usage with configurable delays
-📁 Project Structure
-text
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| **Network Discovery** | Port scanning with nmap + banner grabbing |
+| **Vulnerability Assessment** | CVE lookup via NIST NVD API v2.0 |
+| **Smart Caching** | 95% API request reduction on repeat scans |
+| **Parallel Processing** | Concurrent analysis with ThreadPoolExecutor |
+| **Professional Reporting** | Rich tables, JSON exports, Markdown reports |
+| **Rate Limiting** | Respectful API usage with configurable delays |
+
+## 📁 Project Structure
 integrated-security-scanner/
-├── network_scanner.py      # Network service discovery
+├── network_scanner.py # Network service discovery
 ├── vulnerability_scanner.py # CVE analysis with NIST API
-├── integrated_scanner.py    # Main integration module
-├── requirements.txt         # Dependencies
-├── README.md               # This documentation
-├── .gitignore              # Git ignore rules
-└── LICENSE                 # MIT License
-🚀 Quick Start
-Prerequisites
-bash
+├── integrated_scanner.py # Main integration module
+├── requirements.txt # Dependencies
+├── README.md # This documentation
+├── .gitignore # Git ignore rules
+└── LICENSE # MIT License
+
+text
+
+## 🚀 Quick Start
+
+### Prerequisites
+```bash
 # Install nmap (required)
 sudo apt-get install nmap  # Debian/Ubuntu
 # or
@@ -52,8 +59,8 @@ python integrated_scanner.py 192.168.1.1 -p 22,80,443,8080
 
 # Get help
 python integrated_scanner.py --help
-
 🏗️ Architecture
+text
 graph TD
     A[Target IP/Range] --> B[NetworkScanner]
     B --> C[Service Detection]
@@ -68,7 +75,6 @@ graph TD
     J --> K[Rich Terminal Tables]
     J --> L[JSON Export]
     J --> M[Markdown Report]
-
 📊 Performance Metrics
 Metric	Value	Description
 Cache Efficiency	95%+	API request reduction on repeat scans
@@ -130,7 +136,7 @@ Phase 2: Vulnerability Assessment
 │ CVE-2020-6789 │ HIGH     │ 7.5  │ Apache  │ Buffer overflow...  │
 └───────────────┴──────────┴──────┴─────────┴─────────────────────┘
 🛠️ Dependencies
-txt
+text
 requests>=2.31.0
 python-nmap>=0.7.1
 rich>=13.0.0
