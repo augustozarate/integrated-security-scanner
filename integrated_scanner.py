@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Integrated Network and Vulnerability Scanner
 Combines network service discovery with vulnerability assessment
