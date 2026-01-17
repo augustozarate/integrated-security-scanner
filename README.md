@@ -17,7 +17,7 @@ A professional integrated security scanner that combines network service discove
 | **Parallel Processing** | Concurrent analysis with ThreadPoolExecutor |
 | **Professional Reporting** | Rich tables, JSON exports, Markdown reports |
 | **Rate Limiting** | Respectful API usage with configurable delays |
-
+```
 ## 📁 Project Structure
 integrated-security-scanner/
 ├── network_scanner.py # Network service discovery
@@ -27,41 +27,51 @@ integrated-security-scanner/
 ├── README.md # This documentation
 ├── .gitignore # Git ignore rules
 └── LICENSE # MIT License
-
+```
 
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-```
-# Install nmap (required)
-sudo apt-get install nmap  # Debian/Ubuntu
-# or
-brew install nmap          # macOS
-Installation
 
-# Clone the repository
+# Install nmap (required)
+```
+sudo apt-get install nmap  # Debian/Ubuntu
+```
+or
+```
+brew install nmap          # macOS
+```
+---
+# Installation
+
+Clone the repository
+```
 git clone https://github.com/augustozarate/integrated-security-scanner.git
 cd integrated-security-scanner
+```
 
-# Install Python dependencies
+Install Python dependencies
+```
 pip install -r requirements.txt
+```
+
 Usage Examples
 
-# Scan single host (default ports: 1-1000)
-python integrated_scanner.py 192.168.1.1
+Scan single host (default ports: 1-1000)
+- `python integrated_scanner.py 192.168.1.1`
 
-# Scan network range
-python integrated_scanner.py 192.168.1.0/24 -p 1-1000
+Scan network range
+- `python integrated_scanner.py 192.168.1.0/24 -p 1-1000`
 
-# Scan specific ports
-python integrated_scanner.py 192.168.1.1 -p 22,80,443,8080
+Scan specific ports
+- `python integrated_scanner.py 192.168.1.1 -p 22,80,443,8080`
 
-# Get help
-python integrated_scanner.py --help
+Get help
+- `python integrated_scanner.py --help`
 
 🏗️ Architecture
-graph TD
+```
     A[Target IP/Range] --> B[NetworkScanner]
     B --> C[Service Detection]
     C --> D[ServiceInfo Objects]
@@ -75,17 +85,21 @@ graph TD
     J --> K[Rich Terminal Tables]
     J --> L[JSON Export]
     J --> M[Markdown Report]
+```
 
 📊 Performance Metrics
-Metric	Value	Description
-Cache Efficiency	95%+	API request reduction on repeat scans
-Concurrent Workers	10	Simultaneous service analyses
-Default Rate Limit	0.5s	Delay between API requests
-Typical Scan Time	~30s	For 10 services on local network
+
+| Metric | Value | Description |
+|--------|-------|-------------|
+| **Cache Efficiency** | 95%+ | API request reduction on repeat scans |
+| **Concurrent Workers** | 10 | Simultaneous service analyses |
+| **Default Rate Limit** | 0.5s | Delay between API requests |
+| **Typical Scan Time** | ~30s | For 10 services on local network |
+
 
 🔧 Technical Details
-NetworkScanner (network_scanner.py)
-Uses python-nmap for port scanning
+NetworkScanner (- `network_scanner.py`)
+Uses - `python-nmap` for port scanning
 
 Banner grabbing via raw socket connections
 
@@ -112,6 +126,7 @@ Generates executive summaries
 Multiple output formats
 
 📝 Example Output
+```
 Network Discovery Phase
 
 ╭─────────────────────────────╮
@@ -137,11 +152,13 @@ Phase 2: Vulnerability Assessment
 │ CVE-2021-12345│ CRITICAL │ 9.8  │ ProFTPD │ Remote code exec... │
 │ CVE-2020-6789 │ HIGH     │ 7.5  │ Apache  │ Buffer overflow...  │
 └───────────────┴──────────┴──────┴─────────┴─────────────────────┘
-
+```
 🛠️ Dependencies
+```
 requests>=2.31.0
 python-nmap>=0.7.1
 rich>=13.0.0
+```
 
 ⚖️ License
 This project is licensed under the MIT License - see the LICENSE file for details.
